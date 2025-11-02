@@ -28,7 +28,7 @@ It supports Markdown and text file ingestion, vector-based retrieval, and LLM-po
 
 - When a user asks a question, the system computes embeddings and queries Qdrant.
 - A hierarchical scoring system evaluates relevance across titles, sections, and body texts.
-    - assists the rag in retrieving more relevant documents to improve the accuracy
+    - Assists the rag in retrieving more relevant documents to improve the accuracy
 
 ### Generation
 
@@ -49,39 +49,30 @@ It supports Markdown and text file ingestion, vector-based retrieval, and LLM-po
 
 ### rag.py
 
-QdrantStore — Ensures Qdrant-compatible IDs on upsert
-
-StubLLM — Adds relevance scoring and displays section-level scores
-
-OpenAILLM — Optimized prompt structure, context truncation, and token control
-
-Metric System — Extended metrics for monitoring retrieval and backlog performance
+- QdrantStore: Ensures Qdrant-compatible IDs on upsert
+- StubLLM: Adds relevance scoring and displays section-level scores
+- OpenAILLM: Optimized prompt structure, context truncation, and token control
+- Metric System: Extended metrics for monitoring retrieval and backlog performance
 
 RAGEngine Enhancements:
-
-auto_ingest automatically loads all documents in dir/data
-
-_score_context implements hierarchical weighted matching (title, section, body)
+- auto_ingest automatically loads all documents in dir/data
+- _score_context implements hierarchical weighted matching (title, section, body)
 
 ### Chat.tsx
 
-Initial system greeting message
-
-Auto-scroll to latest message
-
-Local timestamps for each message
-
-Bubble-style layout for user and assistant
-
-Collapsible sections for citations and supporting chunks
+- Initial system greeting message
+- Auto-scroll to latest message
+- Local timestamps for each message
+- Bubble-style layout for user and assistant
+- Collapsible sections for citations and supporting chunks
 
 ### page.tsx
 
-Added collapsible Admin Panel for a cleaner and more focused UI
+-Added collapsible Admin Panel for a cleaner and more focused UI
 
 ### .env
 
-Tuned CHUNK_SIZE and CHUNK_OVERLAP for better retrieval quality
+- Tuned CHUNK_SIZE and CHUNK_OVERLAP for better retrieval quality
 
 ## Design Trade-offs
 | **Decision** | **Rationale** | **Trade-off** |
