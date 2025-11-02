@@ -56,6 +56,7 @@ It supports Markdown and text file ingestion, vector-based retrieval, and LLM-po
 - Structured Markdown and text parsing (_md_sections, _txt_sections)
 - Updated load_documents to support .md and .txt only
 - Automatic file-type detection for correct parsing
+- Section the markdown files into three parts: title, section, body for better chunking, accuracy and speed.
 
 ### rag.py
 
