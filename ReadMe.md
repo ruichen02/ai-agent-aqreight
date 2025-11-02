@@ -2,6 +2,16 @@
 
 A local-first RAG (Retrieval-Augmented Generation) system built with FastAPI, Next.js, and Qdrant.
 
+## Setup
+Running docker
+```bash
+- copy env
+cp .env.example .env
+
+- run all services
+docker compose up --build
+```
+
 ## Overview
 
 This project implements a document-grounded AI assistant that answers policy and product questions using Retrieval-Augmented Generation (RAG).
@@ -68,7 +78,7 @@ RAGEngine Enhancements:
 
 ### page.tsx
 
--Added collapsible Admin Panel for a cleaner and more focused UI
+- Added collapsible Admin Panel for a cleaner and more focused UI
 
 ### .env
 
