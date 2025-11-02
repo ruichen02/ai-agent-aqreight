@@ -64,18 +64,18 @@ It supports Markdown and text file ingestion, vector-based retrieval, and LLM-po
 - StubLLM: Adds relevance scoring and displays section-level scores
 - OpenAILLM: Optimized prompt structure, context truncation, and token control
 - Metric System: Extended metrics for monitoring retrieval and backlog performance
-
-RAGEngine Enhancements:
-- auto_ingest automatically loads all documents in dir/data
-- _score_context implements hierarchical weighted matching (title, section, body)
+- RAGEngine Enhancements:
+    - auto_ingest automatically loads all documents in dir/data
+    - _score_context implements hierarchical weighted matching (title, section, body) for improving accuracy and retrieval speed of the most relevant parts of the documents.
 
 ### Chat.tsx
 
-- Initial system greeting message
-- Auto-scroll to latest message
-- Local timestamps for each message
-- Bubble-style layout for user and assistant
-- Collapsible sections for citations and supporting chunks
+- Improve user experience
+    - Initial system greeting message
+    - Auto-scroll to latest message
+    - Local timestamps for each message
+    - Bubble-style layout for user and assistant
+    - Collapsible sections for citations and supporting chunks
 
 ### page.tsx
 
@@ -98,4 +98,26 @@ RAGEngine Enhancements:
 - Implement caching for repeated queries
 - Multi-file upload UI for direct ingestion from frontend
 - Add a memory for the model to be more interactive with user
+- Create new web page for AdminPanel for better monitoring and safer 
 
+## Testing Purpose
+
+Call api health
+```bash
+curl http://localhost:8000/api/health
+```
+
+Call api metrics
+```bash
+curl http://localhost:8000/api/metrics
+```
+
+Call api ingest
+```bash
+curl -X POST http://localhost:8000/api/ingest
+```
+
+Call api ingest
+```bash
+curl -X POST http://localhost:8000/api/ask
+```
